@@ -24,11 +24,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46115bd3-5e4c-4dd0-a399-383cff3bec02" name="Default" comment="Magician">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/MagicBoxImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/MagicBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MagicBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/testDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/testDrive.java" afterDir="false" />
+    <list default="true" id="46115bd3-5e4c-4dd0-a399-383cff3bec02" name="Default" comment="Magician harry added">
       <change beforePath="$PROJECT_DIR$/src/main/resourses/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourses/applicationContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594588823002</updated>
       <workItem from="1594588825056" duration="763000" />
-      <workItem from="1594629253050" duration="1814000" />
+      <workItem from="1594629253050" duration="2231000" />
     </task>
     <task id="LOCAL-00001" summary="try to save app22">
       <created>1594589149721</created>
@@ -146,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594630584176</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Magician harry added">
+      <created>1594631136433</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594631136433</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,37 +170,38 @@
     <MESSAGE value="try to save app22" />
     <MESSAGE value="small updates" />
     <MESSAGE value="Magician" />
-    <option name="LAST_COMMIT_MESSAGE" value="Magician" />
+    <MESSAGE value="Magician harry added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Magician harry added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="291" y="265" key="#com.intellij.ide.util.MemberChooser" timestamp="1594630292707">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="291" y="265" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1594630292707" />
-    <state width="1574" height="290" key="GridCell.Tab.0.bottom" timestamp="1594629683733">
+    <state width="1574" height="290" key="GridCell.Tab.0.bottom" timestamp="1594631116302">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1574" height="290" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1594629683733" />
-    <state width="1574" height="290" key="GridCell.Tab.0.center" timestamp="1594629683732">
+    <state width="1574" height="290" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1594631116302" />
+    <state width="1574" height="290" key="GridCell.Tab.0.center" timestamp="1594631116301">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1574" height="290" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1594629683732" />
-    <state width="1574" height="290" key="GridCell.Tab.0.left" timestamp="1594629683732">
+    <state width="1574" height="290" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1594631116301" />
+    <state width="1574" height="290" key="GridCell.Tab.0.left" timestamp="1594631116300">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1574" height="290" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1594629683732" />
-    <state width="1574" height="290" key="GridCell.Tab.0.right" timestamp="1594629683732">
+    <state width="1574" height="290" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1594631116300" />
+    <state width="1574" height="290" key="GridCell.Tab.0.right" timestamp="1594631116301">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1574" height="290" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594629683732" />
+    <state width="1574" height="290" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594631116301" />
     <state x="698" y="425" width="431" height="252" key="MultipleFileMergeDialog" timestamp="1594629677044">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="698" y="425" width="431" height="252" key="MultipleFileMergeDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1594629677044" />
-    <state x="408" y="291" key="Vcs.Push.Dialog.v2" timestamp="1594630587545">
+    <state x="408" y="291" key="Vcs.Push.Dialog.v2" timestamp="1594631139631">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="408" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594630587545" />
+    <state x="408" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594631139631" />
     <state x="516" y="334" key="refactoring.ChangeSignatureDialog" timestamp="1594629393172">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
