@@ -16,7 +16,7 @@ public class testDrive {
         kenny.perform();
         System.out.println();
 
-//        Performer hank = (Performer) context.getBean("hank");
-//        hank.perform();
+        Performer magician = (Performer) context.getBean("harry");
+        magician.perform();
     }
 }

@@ -1,4 +1,6 @@
 package app;
 
-public class MagicBox {
+public interface MagicBox {
+    String getContents();
 }
+

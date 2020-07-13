@@ -51,6 +51,15 @@
         <property name="song" value="#{kenny.song}"/>
     </bean>
 
+    <bean id="harry"
+          class="app.Magician">
+        <property name="magicBox" ref="magicBox"/>
+        <property name="magicWords" value="Bippiti boppity boo"/>
+    </bean>
+
+    <bean id="magicBox"
+          class="app.MagicBoxImpl"/>
+
     <bean id="saxophone"
           class="app.Saxophone"/>
 
