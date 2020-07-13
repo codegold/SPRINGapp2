@@ -24,9 +24,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46115bd3-5e4c-4dd0-a399-383cff3bec02" name="Default" comment="method replacing. Tiger.">
+    <list default="true" id="46115bd3-5e4c-4dd0-a399-383cff3bec02" name="Default" comment="DI with methods">
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Guitar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Instrumentalist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Instrumentalist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/testDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/testDrive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourses/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourses/applicationContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594588823002</updated>
       <workItem from="1594588825056" duration="763000" />
-      <workItem from="1594629253050" duration="4166000" />
+      <workItem from="1594629253050" duration="5031000" />
     </task>
     <task id="LOCAL-00001" summary="try to save app22">
       <created>1594589149721</created>
@@ -157,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594632346219</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="DI with methods">
+      <created>1594639479781</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594639479781</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,37 +190,38 @@
     <MESSAGE value="Magician" />
     <MESSAGE value="Magician harry added" />
     <MESSAGE value="method replacing. Tiger." />
-    <option name="LAST_COMMIT_MESSAGE" value="method replacing. Tiger." />
+    <MESSAGE value="DI with methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="DI with methods" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="291" y="265" key="#com.intellij.ide.util.MemberChooser" timestamp="1594632272591">
+    <state x="291" y="265" key="#com.intellij.ide.util.MemberChooser" timestamp="1594640099565">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="291" y="265" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1594632272591" />
-    <state width="952" height="290" key="GridCell.Tab.0.bottom" timestamp="1594638651646">
+    <state x="291" y="265" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1594640099565" />
+    <state width="952" height="190" key="GridCell.Tab.0.bottom" timestamp="1594639495677">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="952" height="290" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1594638651646" />
-    <state width="952" height="290" key="GridCell.Tab.0.center" timestamp="1594638651645">
+    <state width="952" height="190" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1594639495677" />
+    <state width="952" height="190" key="GridCell.Tab.0.center" timestamp="1594639495677">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="952" height="290" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1594638651645" />
-    <state width="952" height="290" key="GridCell.Tab.0.left" timestamp="1594638651644">
+    <state width="952" height="190" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1594639495677" />
+    <state width="952" height="190" key="GridCell.Tab.0.left" timestamp="1594639495676">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="952" height="290" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1594638651644" />
-    <state width="952" height="290" key="GridCell.Tab.0.right" timestamp="1594638651645">
+    <state width="952" height="190" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1594639495676" />
+    <state width="952" height="190" key="GridCell.Tab.0.right" timestamp="1594639495677">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="952" height="290" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594638651645" />
+    <state width="952" height="190" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594639495677" />
     <state x="698" y="425" width="431" height="252" key="MultipleFileMergeDialog" timestamp="1594629677044">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="698" y="425" width="431" height="252" key="MultipleFileMergeDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1594629677044" />
-    <state x="408" y="291" key="Vcs.Push.Dialog.v2" timestamp="1594632349338">
+    <state x="408" y="291" key="Vcs.Push.Dialog.v2" timestamp="1594639485363">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="408" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594632349338" />
+    <state x="408" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594639485363" />
     <state x="516" y="334" key="refactoring.ChangeSignatureDialog" timestamp="1594629393172">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>

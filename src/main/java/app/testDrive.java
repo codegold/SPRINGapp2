@@ -12,11 +12,14 @@ public class testDrive {
 //        Performer performer = (Performer) context.getBean("poeticDuke");
 //        performer.perform();
 
-        Performer kenny = (Performer) context.getBean("kenny2");
-        kenny.perform();
-        System.out.println();
+//        Performer kenny = (Performer) context.getBean("kenny2");
+//        kenny.perform();
+//        System.out.println();
 
         Performer magician = (Performer) context.getBean("harry");
         magician.perform();
+
+        Performer stewie = (Performer) context.getBean("stewie");
+        stewie.perform();
     }
 }

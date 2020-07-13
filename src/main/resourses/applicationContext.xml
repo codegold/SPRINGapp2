@@ -21,7 +21,7 @@
           destroy-method="turnOffLights"/>
 
     <bean id="kenny"
-          class="app.Instrumentalist">
+          class="app.Instrumentalist" abstract="true">
         <property name="song" value="Jingle Bells"/>
         <property name="instrument">
             <bean class="app.Saxophone"/>
@@ -29,7 +29,7 @@
     </bean>
 
     <bean id="kenny2"
-          class="app.Instrumentalist">
+          class="app.Instrumentalist" abstract="true">
         <property name="song" value="Jingle Bells"/>
         <property name="instrument" ref="piano"/>
     </bean>
@@ -47,7 +47,7 @@
     </bean>
 
     <bean id="carl"
-          class="app.Instrumentalist">
+          class="app.Instrumentalist" abstract="true">
         <property name="song" value="#{kenny.song}"/>
     </bean>
 
@@ -59,9 +59,9 @@
 
     <bean id="magicBox"
           class="app.MagicBoxImpl">
-    <replaced-method
-        name="getContents"
-        replacer="tigerReplacer"/>
+        <replaced-method
+                name="getContents"
+                replacer="tigerReplacer"/>
     </bean>
 
     <bean id="tigerReplacer"
@@ -73,11 +73,21 @@
     <bean id="piano"
           class="app.Piano"/>
 
+    <bean id="guitar"
+          class="app.Guitar"
+          scope="prototype"/>
+
     <bean id="duke"
           class="app.PoeticJuggler">
         <constructor-arg value="15"/>
         <constructor-arg>
             <bean class="app.Sonnet29"/>
         </constructor-arg>
+    </bean>
+
+    <bean id="stewie"
+          class="app.Instrumentalist">
+        <lookup-method name="getInstrument" bean="guitar"/>
+        <property name="song" value="Greensleeves"/>
     </bean>
 </beans>
