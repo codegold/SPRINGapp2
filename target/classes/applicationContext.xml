@@ -58,7 +58,14 @@
     </bean>
 
     <bean id="magicBox"
-          class="app.MagicBoxImpl"/>
+          class="app.MagicBoxImpl">
+    <replaced-method
+        name="getContents"
+        replacer="tigerReplacer"/>
+    </bean>
+
+    <bean id="tigerReplacer"
+          class="app.TigerReplacer"/>
 
     <bean id="saxophone"
           class="app.Saxophone"/>
