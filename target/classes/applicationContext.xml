@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <!-- Здесь должны находиться объявления компонентов -->
+    <bean id="poeticDuke"
+          class="app.PoeticJuggler">
+        <constructor-arg value="15"/>
+        <constructor-arg ref="sonnet29"/>
+    </bean>
+    <bean id="sonnet29"
+          class="app.Sonnet29"/>
+    <bean id="theStage"
+          class="app.Stage"
+          factory-method="getInstance"/>
+
+    <bean id="auditorium"
+          class="app.Auditorium"
+          init-method="turnOnLights"
+          destroy-method="turnOffLights"/>
+
+    <bean id="kenny"
+          class="app.Instrumentalist">
+        <property name="song" value="Jingle Bells"/>
+        <property name="instrument">
+            <bean class="app.Saxophone"/>
+        </property>
+    </bean>
+
+    <bean id="kenny2"
+          class="app.Instrumentalist">
+        <property name="song" value="Jingle Bells"/>
+        <property name="instrument" ref="piano"/>
+    </bean>
+
+    <bean id="hank"
+          class="app.OneManBand">
+        <property name="instruments">
+            <props>
+                <prop key="GUITAR">STRUM STRUM</prop>
+                <prop key="CYMBAL">CRASH CRASH</prop>
+                <prop key="HARMONICA">HUM HUM</prop>
+            </props>
+        </property>
+
+    </bean>
+
+    <bean id="carl"
+          class="app.Instrumentalist">
+        <property name="song" value="#{kenny.song}"/>
+    </bean>
+
+    <bean id="saxophone"
+          class="app.Saxophone"/>
+
+    <bean id="piano"
+          class="app.Piano"/>
+
+    <bean id="duke"
+          class="app.PoeticJuggler">
+        <constructor-arg value="15"/>
+        <constructor-arg>
+            <bean class="app.Sonnet29"/>
+        </constructor-arg>
+    </bean>
+</beans>
