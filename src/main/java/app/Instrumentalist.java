@@ -4,7 +4,7 @@ package app;
 import org.springframework.beans.factory.annotation.Configurable;
 
 @Configurable("pianist")
-public abstract class Instrumentalist implements Performer {
+public class Instrumentalist implements Performer {
     public Instrumentalist() {
     }
 
@@ -20,7 +20,9 @@ public abstract class Instrumentalist implements Performer {
         return age;
     }
 
-    public abstract Instrument getInstrument();
+    public Instrument getInstrument() {
+        return instrument;
+    }
 
     public void setInstrument(Instrument instrument) {
         this.instrument = instrument;

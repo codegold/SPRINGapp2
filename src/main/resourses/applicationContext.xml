@@ -21,17 +21,18 @@
           destroy-method="turnOffLights"/>
 
     <bean id="kenny"
-          class="app.Instrumentalist" abstract="true">
+          class="app.Instrumentalist"
+          autowire="byName">
         <property name="song" value="Jingle Bells"/>
-        <property name="instrument">
-            <bean class="app.Saxophone"/>
-        </property>
     </bean>
 
+    <bean id="instrument"
+          class="app.Saxophone"/>
+
     <bean id="kenny2"
-          class="app.Instrumentalist" abstract="true">
+          class="app.Instrumentalist">
         <property name="song" value="Jingle Bells"/>
-        <property name="instrument" ref="piano"/>
+        <property name="instrument" ref="saxophone"/>
     </bean>
 
     <bean id="hank"
@@ -68,7 +69,8 @@
           class="app.TigerReplacer"/>
 
     <bean id="saxophone"
-          class="app.Saxophone"/>
+          class="app.Saxophone"
+          autowire-candidate="false"/>
 
     <bean id="piano"
           class="app.Piano"/>
