@@ -21,5 +21,9 @@ public class testDrive {
 
         Performer stewie = (Performer) context.getBean("stewie");
         stewie.perform();
+
+        System.out.println();
+        Performer duke = (Performer) context.getBean("duke");
+        duke.perform();
     }
 }
