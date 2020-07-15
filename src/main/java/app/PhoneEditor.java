@@ -14,7 +14,6 @@ public class PhoneEditor extends java.beans.PropertyEditorSupport {
 
     private String stripNonNumeric(String original) {
         StringBuffer allNumeric = new StringBuffer();
-
         for (int i = 0; i < original.length(); i++) {
             char c = original.charAt(i);
             if (Character.isDigit(c)) {

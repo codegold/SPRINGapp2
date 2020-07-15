@@ -1,10 +1,7 @@
 package app;
 
-import app.qualifiers.stringedInstrument;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-@Autowired
-@stringedInstrument
 public class Guitar implements Instrument {
     public Guitar() {
     }

@@ -2,9 +2,8 @@ package app;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.stereotype.Component;
 
-@Configurable("pianist")
 public class Instrumentalist implements Performer {
     public Instrumentalist() {
     }
@@ -25,7 +24,6 @@ public class Instrumentalist implements Performer {
         return instrument;
     }
 
-    @Autowired
     public void setInstrument(Instrument instrument) {
         this.instrument = instrument;
     }

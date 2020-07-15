@@ -1,0 +1,218 @@
+Index: src/main/java/app/PhoneEditor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package app;\n\npublic class PhoneEditor extends java.beans.PropertyEditorSupport {\n    @Override\n    public void setAsText(String textValue) {\n        String stripped = stripNonNumeric(textValue);\n\n        String areaCode = stripped.substring(0, 3);\n        String prefix = stripped.substring(3, 6);\n        String number = stripped.substring(6);\n        PhoneNumber phone = new PhoneNumber(areaCode, prefix, number);\n        setValue(phone);\n    }\n\n    private String stripNonNumeric(String original) {\n        StringBuffer allNumeric = new StringBuffer();\n\n        for (int i = 0; i < original.length(); i++) {\n            char c = original.charAt(i);\n            if (Character.isDigit(c)) {\n                allNumeric.append(c);\n            }\n        }\n        return allNumeric.toString();\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/app/PhoneEditor.java	(revision c31aa7088eaa6ee2aaf54a3a37127f2a114df9a7)
++++ src/main/java/app/PhoneEditor.java	(date 1594671441557)
+@@ -14,7 +14,6 @@
+ 
+     private String stripNonNumeric(String original) {
+         StringBuffer allNumeric = new StringBuffer();
+-
+         for (int i = 0; i < original.length(); i++) {
+             char c = original.charAt(i);
+             if (Character.isDigit(c)) {
+Index: src/main/java/app/testDrive.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package app;\n\nimport org.springframework.context.ApplicationContext;\nimport org.springframework.context.support.ClassPathXmlApplicationContext;\n\npublic class testDrive {\n    public static void main(String[] args) throws PerformanceException {\n        ApplicationContext context = new ClassPathXmlApplicationContext(\n                \"applicationContext.xml\"\n        );\n\n//        Performer performer = (Performer) context.getBean(\"poeticDuke\");\n//        performer.perform();\n\n//        Performer kenny = (Performer) context.getBean(\"kenny2\");\n//        kenny.perform();\n//        System.out.println();\n\n        Performer magician = (Performer) context.getBean(\"harry\");\n        magician.perform();\n\n        Performer stewie = (Performer) context.getBean(\"stewie\");\n        stewie.perform();\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/app/testDrive.java	(revision c31aa7088eaa6ee2aaf54a3a37127f2a114df9a7)
++++ src/main/java/app/testDrive.java	(date 1594674671158)
+@@ -19,7 +19,7 @@
+         Performer magician = (Performer) context.getBean("harry");
+         magician.perform();
+ 
+-        Performer stewie = (Performer) context.getBean("stewie");
+-        stewie.perform();
++//        Performer stewie = (Performer) context.getBean("stewie");
++//        stewie.perform();
+     }
+ }
+Index: src/main/resourses/applicationContext.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<beans xmlns=\"http://www.springframework.org/schema/beans\"\n       xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n       xsi:schemaLocation=\"http://www.springframework.org/schema/beans\n        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd\">\n    <!-- Здесь должны находиться объявления компонентов -->\n    <bean id=\"poeticDuke\"\n          class=\"app.PoeticJuggler\">\n        <constructor-arg value=\"15\"/>\n        <constructor-arg ref=\"sonnet29\"/>\n    </bean>\n    <bean id=\"sonnet29\"\n          class=\"app.Sonnet29\"/>\n    <bean id=\"theStage\"\n          class=\"app.Stage\"\n          factory-method=\"getInstance\"/>\n\n    <bean id=\"auditorium\"\n          class=\"app.Auditorium\"\n          init-method=\"turnOnLights\"\n          destroy-method=\"turnOffLights\"/>\n\n    <bean id=\"kenny\"\n          class=\"app.Instrumentalist\" abstract=\"true\">\n        <property name=\"song\" value=\"Jingle Bells\"/>\n        <property name=\"instrument\">\n            <bean class=\"app.Saxophone\"/>\n        </property>\n    </bean>\n\n    <bean id=\"kenny2\"\n          class=\"app.Instrumentalist\" abstract=\"true\">\n        <property name=\"song\" value=\"Jingle Bells\"/>\n        <property name=\"instrument\" ref=\"piano\"/>\n    </bean>\n\n    <bean id=\"hank\"\n          class=\"app.OneManBand\">\n        <property name=\"instruments\">\n            <props>\n                <prop key=\"GUITAR\">STRUM STRUM</prop>\n                <prop key=\"CYMBAL\">CRASH CRASH</prop>\n                <prop key=\"HARMONICA\">HUM HUM</prop>\n            </props>\n        </property>\n\n    </bean>\n\n    <bean id=\"carl\"\n          class=\"app.Instrumentalist\" abstract=\"true\">\n        <property name=\"song\" value=\"#{kenny.song}\"/>\n    </bean>\n\n    <bean id=\"harry\"\n          class=\"app.Magician\">\n        <property name=\"magicBox\" ref=\"magicBox\"/>\n        <property name=\"magicWords\" value=\"Bippiti boppity boo\"/>\n    </bean>\n\n    <bean id=\"magicBox\"\n          class=\"app.MagicBoxImpl\">\n        <replaced-method\n                name=\"getContents\"\n                replacer=\"tigerReplacer\"/>\n    </bean>\n\n    <bean id=\"tigerReplacer\"\n          class=\"app.TigerReplacer\"/>\n\n    <bean id=\"saxophone\"\n          class=\"app.Saxophone\"/>\n\n    <bean id=\"piano\"\n          class=\"app.Piano\"/>\n\n    <bean id=\"guitar\"\n          class=\"app.Guitar\"\n          scope=\"prototype\"/>\n\n    <bean id=\"duke\"\n          class=\"app.PoeticJuggler\">\n        <constructor-arg value=\"15\"/>\n        <constructor-arg>\n            <bean class=\"app.Sonnet29\"/>\n        </constructor-arg>\n    </bean>\n\n    <bean id=\"stewie\"\n          class=\"app.Instrumentalist\">\n        <lookup-method name=\"getInstrument\" bean=\"guitar\"/>\n        <property name=\"song\" value=\"Greensleeves\"/>\n    </bean>\n\n    <bean id=\"pianist\"\n          class=\"app.Instrumentalist\"\n          abstract=\"true\">\n        <property name=\"song\" value=\"Chopsticks\"/>\n        <property name=\"instrument\">\n            <bean class=\"app.Piano\"/>\n        </property>\n    </bean>\n\n    <bean id=\"infoPhone\"\n          class=\"app.PhoneNumber\">\n        <constructor-arg value=\"888\"/>\n        <constructor-arg value=\"555\"/>\n        <constructor-arg value=\"1212\"/>\n    </bean>\n\n    <bean id=\"contact\"\n          class=\"app.Contact\">\n        <property name=\"phoneNumber\" ref=\"infoPhone\"/>\n    </bean>\n</beans>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/resourses/applicationContext.xml	(revision c31aa7088eaa6ee2aaf54a3a37127f2a114df9a7)
++++ src/main/resourses/applicationContext.xml	(date 1594675234992)
+@@ -107,8 +107,20 @@
+         <constructor-arg value="1212"/>
+     </bean>
+ 
+-    <bean id="contact"
+-          class="app.Contact">
+-        <property name="phoneNumber" ref="infoPhone"/>
+-    </bean>
++<!--    <bean id="contact"-->
++<!--          class="app.Contact">-->
++<!--        <property name="phoneNumber" value="888-555-1212"/>-->
++<!--    </bean>-->
++
++<!--    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
++<!--        <property name="customEditors">-->
++<!--            <map>-->
++<!--                <entry key="app.PhoneNumber">-->
++<!--                    <bean id="phoneEditor"-->
++<!--                          class="app.PhoneEditor">-->
++<!--                    </bean>-->
++<!--                </entry>-->
++<!--            </map>-->
++<!--        </property>-->
++<!--    </bean>-->
+ </beans>
+\ No newline at end of file
+Index: target/classes/applicationContext.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<beans xmlns=\"http://www.springframework.org/schema/beans\"\n       xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n       xsi:schemaLocation=\"http://www.springframework.org/schema/beans\n        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd\">\n    <!-- Здесь должны находиться объявления компонентов -->\n    <bean id=\"poeticDuke\"\n          class=\"app.PoeticJuggler\">\n        <constructor-arg value=\"15\"/>\n        <constructor-arg ref=\"sonnet29\"/>\n    </bean>\n    <bean id=\"sonnet29\"\n          class=\"app.Sonnet29\"/>\n    <bean id=\"theStage\"\n          class=\"app.Stage\"\n          factory-method=\"getInstance\"/>\n\n    <bean id=\"auditorium\"\n          class=\"app.Auditorium\"\n          init-method=\"turnOnLights\"\n          destroy-method=\"turnOffLights\"/>\n\n    <bean id=\"kenny\"\n          class=\"app.Instrumentalist\" abstract=\"true\">\n        <property name=\"song\" value=\"Jingle Bells\"/>\n        <property name=\"instrument\">\n            <bean class=\"app.Saxophone\"/>\n        </property>\n    </bean>\n\n    <bean id=\"kenny2\"\n          class=\"app.Instrumentalist\" abstract=\"true\">\n        <property name=\"song\" value=\"Jingle Bells\"/>\n        <property name=\"instrument\" ref=\"piano\"/>\n    </bean>\n\n    <bean id=\"hank\"\n          class=\"app.OneManBand\">\n        <property name=\"instruments\">\n            <props>\n                <prop key=\"GUITAR\">STRUM STRUM</prop>\n                <prop key=\"CYMBAL\">CRASH CRASH</prop>\n                <prop key=\"HARMONICA\">HUM HUM</prop>\n            </props>\n        </property>\n\n    </bean>\n\n    <bean id=\"carl\"\n          class=\"app.Instrumentalist\" abstract=\"true\">\n        <property name=\"song\" value=\"#{kenny.song}\"/>\n    </bean>\n\n    <bean id=\"harry\"\n          class=\"app.Magician\">\n        <property name=\"magicBox\" ref=\"magicBox\"/>\n        <property name=\"magicWords\" value=\"Bippiti boppity boo\"/>\n    </bean>\n\n    <bean id=\"magicBox\"\n          class=\"app.MagicBoxImpl\">\n        <replaced-method\n                name=\"getContents\"\n                replacer=\"tigerReplacer\"/>\n    </bean>\n\n    <bean id=\"tigerReplacer\"\n          class=\"app.TigerReplacer\"/>\n\n    <bean id=\"saxophone\"\n          class=\"app.Saxophone\"/>\n\n    <bean id=\"piano\"\n          class=\"app.Piano\"/>\n\n    <bean id=\"guitar\"\n          class=\"app.Guitar\"\n          scope=\"prototype\"/>\n\n    <bean id=\"duke\"\n          class=\"app.PoeticJuggler\">\n        <constructor-arg value=\"15\"/>\n        <constructor-arg>\n            <bean class=\"app.Sonnet29\"/>\n        </constructor-arg>\n    </bean>\n\n    <bean id=\"stewie\"\n          class=\"app.Instrumentalist\">\n        <lookup-method name=\"getInstrument\" bean=\"guitar\"/>\n        <property name=\"song\" value=\"Greensleeves\"/>\n    </bean>\n</beans>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- target/classes/applicationContext.xml	(revision c31aa7088eaa6ee2aaf54a3a37127f2a114df9a7)
++++ target/classes/applicationContext.xml	(date 1594675235184)
+@@ -90,4 +90,37 @@
+         <lookup-method name="getInstrument" bean="guitar"/>
+         <property name="song" value="Greensleeves"/>
+     </bean>
++
++    <bean id="pianist"
++          class="app.Instrumentalist"
++          abstract="true">
++        <property name="song" value="Chopsticks"/>
++        <property name="instrument">
++            <bean class="app.Piano"/>
++        </property>
++    </bean>
++
++    <bean id="infoPhone"
++          class="app.PhoneNumber">
++        <constructor-arg value="888"/>
++        <constructor-arg value="555"/>
++        <constructor-arg value="1212"/>
++    </bean>
++
++<!--    <bean id="contact"-->
++<!--          class="app.Contact">-->
++<!--        <property name="phoneNumber" value="888-555-1212"/>-->
++<!--    </bean>-->
++
++<!--    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
++<!--        <property name="customEditors">-->
++<!--            <map>-->
++<!--                <entry key="app.PhoneNumber">-->
++<!--                    <bean id="phoneEditor"-->
++<!--                          class="app.PhoneEditor">-->
++<!--                    </bean>-->
++<!--                </entry>-->
++<!--            </map>-->
++<!--        </property>-->
++<!--    </bean>-->
+ </beans>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"5cc6b0b4-a8a8-4ea1-a550-41ecf0f799e5\" name=\"Default\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/jarRepositories.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/encodings.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/app/PhoneEditor.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/app/PhoneEditor.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectFrameBounds\">\n    <option name=\"x\" value=\"-265\" />\n    <option name=\"y\" value=\"23\" />\n    <option name=\"width\" value=\"918\" />\n    <option name=\"height\" value=\"877\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1ee76dA6RQNgklSkRB3XQExlI9G\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\n    <property name=\"nodejs_interpreter_path.stuck_in_default_project\" value=\"undefined stuck path\" />\n    <property name=\"nodejs_npm_path_reset_for_default_project\" value=\"true\" />\n  </component>\n  <component name=\"RunManager\">\n    <configuration default=\"true\" type=\"Application\" factoryName=\"Application\">\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"testDrive\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"app.testDrive\" />\n      <module name=\"SPRINGapp2\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"app.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"JUnit\" factoryName=\"JUnit\">\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"%MODULE_WORKING_DIR%\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"TestNG\">\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"%MODULE_WORKING_DIR%\" />\n      <properties />\n      <listeners />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.testDrive\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"5cc6b0b4-a8a8-4ea1-a550-41ecf0f799e5\" name=\"Default\" comment=\"\" />\n      <created>1594645618940</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1594645618940</updated>\n      <workItem from=\"1594645620258\" duration=\"2366000\" />\n      <workItem from=\"1594670039851\" duration=\"800000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"2\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"masterDetails\">\n    <states>\n      <state key=\"ProjectJDKs.UI\">\n        <settings>\n          <last-edited>1.8</last-edited>\n          <splitter-proportions>\n            <option name=\"proportions\">\n              <list>\n                <option value=\"0.2\" />\n              </list>\n            </option>\n          </splitter-proportions>\n        </settings>\n      </state>\n    </states>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision c31aa7088eaa6ee2aaf54a3a37127f2a114df9a7)
++++ .idea/workspace.xml	(date 1594796901312)
+@@ -19,12 +19,15 @@
+     <select />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5cc6b0b4-a8a8-4ea1-a550-41ecf0f799e5" name="Default" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++    <list default="true" id="5cc6b0b4-a8a8-4ea1-a550-41ecf0f799e5" name="Default" comment="Additional DI. PhoneEditor.">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/app/PhoneEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/PhoneEditor.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/app/testDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/testDrive.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resourses/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourses/applicationContext.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/app/Instrumentalist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Instrumentalist.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/app/OneManBand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/OneManBand.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/app/testDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/testDrive.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -40,12 +43,6 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="ProjectFrameBounds">
+-    <option name="x" value="-265" />
+-    <option name="y" value="23" />
+-    <option name="width" value="918" />
+-    <option name="height" value="877" />
+   </component>
+   <component name="ProjectId" id="1ee76dA6RQNgklSkRB3XQExlI9G" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+@@ -116,8 +113,17 @@
+       <option name="presentableId" value="Default" />
+       <updated>1594645618940</updated>
+       <workItem from="1594645620258" duration="2366000" />
+-      <workItem from="1594670039851" duration="800000" />
++      <workItem from="1594670039851" duration="3844000" />
++      <workItem from="1594794105093" duration="583000" />
++    </task>
++    <task id="LOCAL-00001" summary="Additional DI. PhoneEditor.">
++      <created>1594670868658</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1594670868659</updated>
+     </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -133,6 +139,37 @@
+         </entry>
+       </map>
+     </option>
++    <option name="oldMeFiltersMigrated" value="true" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Additional DI. PhoneEditor." />
++    <option name="LAST_COMMIT_MESSAGE" value="Additional DI. PhoneEditor." />
++  </component>
++  <component name="WindowStateProjectService">
++    <state width="1775" height="478" key="GridCell.Tab.0.bottom" timestamp="1594680373776">
++      <screen x="0" y="23" width="1920" height="1057" />
++    </state>
++    <state width="1775" height="478" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1594680373776" />
++    <state width="1775" height="478" key="GridCell.Tab.0.center" timestamp="1594680373774">
++      <screen x="0" y="23" width="1920" height="1057" />
++    </state>
++    <state width="1775" height="478" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1594680373774" />
++    <state width="1775" height="478" key="GridCell.Tab.0.left" timestamp="1594680373773">
++      <screen x="0" y="23" width="1920" height="1057" />
++    </state>
++    <state width="1775" height="478" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1594680373773" />
++    <state width="1775" height="478" key="GridCell.Tab.0.right" timestamp="1594680373774">
++      <screen x="0" y="23" width="1920" height="1057" />
++    </state>
++    <state width="1775" height="478" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594680373774" />
++    <state x="120" y="291" key="Vcs.Push.Dialog.v2" timestamp="1594670872209">
++      <screen x="0" y="23" width="1920" height="1057" />
++    </state>
++    <state x="120" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594670872209" />
++    <state x="601" y="242" key="spring file set editor" timestamp="1594674948755">
++      <screen x="0" y="23" width="1920" height="1057" />
++    </state>
++    <state x="601" y="242" key="spring file set editor/0.23.1920.1057@0.23.1920.1057" timestamp="1594674948755" />
+   </component>
+   <component name="masterDetails">
+     <states>

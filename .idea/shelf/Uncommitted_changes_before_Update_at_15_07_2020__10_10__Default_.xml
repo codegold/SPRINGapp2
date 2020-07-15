@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Update_at_15_07_2020,_10_10_[Default]" date="1594797111781" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_07_2020,_10_10_[Default]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 15.07.2020, 10:10 [Default]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/app/testDrive.class" />
+    <option name="AFTER_PATH" value="target/classes/app/testDrive.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_07_2020,_10_10_[Default]/testDrive.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/app/Instrumentalist.class" />
+    <option name="AFTER_PATH" value="target/classes/app/Instrumentalist.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_07_2020,_10_10_[Default]/Instrumentalist.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/app/OneManBand.class" />
+    <option name="AFTER_PATH" value="target/classes/app/OneManBand.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_07_2020,_10_10_[Default]/OneManBand.class" />
+  </binary>
+</changelist>

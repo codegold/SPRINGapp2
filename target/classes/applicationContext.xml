@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/tool"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-        http://www.springframework.org/schema/tool http://www.springframework.org/schema/tool/spring-tool.xsd
         http://www.springframework.org/schema/context
-        https://www.springframework.org/schema/context/spring-context.xsd">
-    <context:annotation-config/>
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <context:component-scan
+            base-package="app"/>
     <!-- Здесь должны находиться объявления компонентов -->
     <bean id="poeticDuke"
           class="app.PoeticJuggler">
@@ -111,8 +111,20 @@
         <constructor-arg value="1212"/>
     </bean>
 
-    <bean id="contact"
-          class="app.Contact">
-        <property name="phoneNumber" ref="infoPhone"/>
-    </bean>
+    <!--    <bean id="contact"-->
+    <!--          class="app.Contact">-->
+    <!--        <property name="phoneNumber" value="888-555-1212"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
+    <!--        <property name="customEditors">-->
+    <!--            <map>-->
+    <!--                <entry key="app.PhoneNumber">-->
+    <!--                    <bean id="phoneEditor"-->
+    <!--                          class="app.PhoneEditor">-->
+    <!--                    </bean>-->
+    <!--                </entry>-->
+    <!--            </map>-->
+    <!--        </property>-->
+    <!--    </bean>-->
 </beans>
