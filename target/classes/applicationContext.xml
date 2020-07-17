@@ -12,7 +12,7 @@
     <bean id="poeticDuke"
           class="app.PoeticJuggler">
         <constructor-arg value="15"/>
-        <constructor-arg ref="sonnet29"/>
+       <constructor-arg ref="sonnet29" />
     </bean>
     <bean id="sonnet29"
           class="app.Sonnet29"/>

@@ -7,10 +7,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class testDrive {
     public static void main(String[] args) throws PerformanceException {
         ApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext2.xml"
+                "applicationContext.xml"
         );
 
         Performer magician = (Performer) context.getBean("kenny");
         magician.perform();
+
     }
 }

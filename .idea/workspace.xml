@@ -19,9 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cc6b0b4-a8a8-4ea1-a550-41ecf0f799e5" name="Default" comment="thinker volunteer">
+    <list default="true" id="5cc6b0b4-a8a8-4ea1-a550-41ecf0f799e5" name="Default" comment="magician update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Contestant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/GraciousContestant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Audience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Audience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/testDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/testDrive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resourses/ApplicationContext2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourses/ApplicationContext2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ApplicationContext2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ApplicationContext2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/Magician.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Magician.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/SpringAppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/testDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/testDrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +127,7 @@
       <workItem from="1594670039851" duration="800000" />
       <workItem from="1594808503251" duration="2861000" />
       <workItem from="1594816212369" duration="750000" />
-      <workItem from="1594969715823" duration="6596000" />
+      <workItem from="1594969715823" duration="9610000" />
     </task>
     <task id="LOCAL-00001" summary="Spring AOP start.">
       <created>1594824589745</created>
@@ -167,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594987110363</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="magician update">
+      <created>1594988163183</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1594988163183</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,9 +209,9 @@
     <MESSAGE value="Определение именованного среза множества точек&#10;сопряжения для устранения избыточных определений срезов" />
     <MESSAGE value="watchPerformance()" />
     <MESSAGE value="ProceedingJoinPoint" />
-    <MESSAGE value="magician update" />
     <MESSAGE value="thinker volunteer" />
-    <option name="LAST_COMMIT_MESSAGE" value="thinker volunteer" />
+    <MESSAGE value="magician update" />
+    <option name="LAST_COMMIT_MESSAGE" value="magician update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="161" y="237" key="#Inspections" timestamp="1594987198340">
@@ -204,30 +222,34 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="340" y="265" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1594987021890" />
-    <state width="1114" height="477" key="GridCell.Tab.0.bottom" timestamp="1594802813692">
+    <state width="1013" height="477" key="GridCell.Tab.0.bottom" timestamp="1594988332216">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1114" height="477" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1594802813692" />
-    <state width="1114" height="477" key="GridCell.Tab.0.center" timestamp="1594802813691">
+    <state width="1013" height="477" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1594988332216" />
+    <state width="1013" height="477" key="GridCell.Tab.0.center" timestamp="1594988332215">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1114" height="477" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1594802813691" />
-    <state width="1114" height="477" key="GridCell.Tab.0.left" timestamp="1594802813691">
+    <state width="1013" height="477" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1594988332215" />
+    <state width="1013" height="477" key="GridCell.Tab.0.left" timestamp="1594988332215">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1114" height="477" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1594802813691" />
-    <state width="1114" height="477" key="GridCell.Tab.0.right" timestamp="1594802813692">
+    <state width="1013" height="477" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1594988332215" />
+    <state width="1013" height="477" key="GridCell.Tab.0.right" timestamp="1594988332216">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1114" height="477" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594802813692" />
-    <state x="194" y="291" key="Vcs.Push.Dialog.v2" timestamp="1594987115981">
+    <state width="1013" height="477" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594988332215" />
+    <state x="194" y="291" key="Vcs.Push.Dialog.v2" timestamp="1594988166130">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="194" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594987115981" />
+    <state x="194" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594988166130" />
     <state x="386" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594969730698">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="386" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594969730698" />
+    <state x="1003" y="23" width="914" height="1038" key="dock-window-1" timestamp="1594991954595">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1003" y="23" width="914" height="1038" key="dock-window-1/0.23.1920.1057@0.23.1920.1057" timestamp="1594991954595" />
   </component>
   <component name="masterDetails">
     <states>

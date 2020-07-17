@@ -2,10 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 http://www.springframework.org/schema/context
-http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
     <context:component-scan
             base-package="app"/>
     <bean id="kenny"
@@ -14,4 +15,41 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
     <bean id="saxophone"
           class="app.Saxophone"/>
+
+    <bean id="audience"
+          class="app.Audience"/>
+
+    <bean id="magician"
+          class="app.Magician"/>
+
+    <aop:config>
+        <aop:aspect ref="magician">
+            <aop:pointcut id="thinking"
+                          expression="execution(* app.Thinker.thinkOfSomething(String))
+                  and args(thoughts)"/>
+
+            <aop:before method="interceptThoughts"
+                        arg-names="thoughts" pointcut-ref="thinking"/>
+        </aop:aspect>
+    </aop:config>
+
+    <!--    <aop:config>-->
+    <!--        <aop:aspect ref="audience">-->
+    <!--            <aop:pointcut id="performance" expression=-->
+    <!--                    "execution(* app.Performer.perform())"/>-->
+    <!--            &lt;!&ndash; Определение среза множества точек сопряжения &ndash;&gt;-->
+
+    <!--            <aop:before-->
+    <!--                    pointcut-ref="performance"-->
+    <!--                    method="turnOffCellPhones"/>-->
+
+    <!--            <aop:after-returning pointcut-ref="performance"-->
+    <!--                                 method="applaud"/>-->
+
+    <!--            <aop:after-throwing pointcut-ref="performance"-->
+    <!--                                method="demandRefund"/>-->
+    <!--        </aop:aspect>-->
+    <!--    </aop:config>-->
+
+
 </beans>
