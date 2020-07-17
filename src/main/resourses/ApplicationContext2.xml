@@ -19,34 +19,37 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.
     <bean id="audience"
           class="app.Audience"/>
 
+    <bean id="magician"
+          class="app.Magician"/>
+
     <aop:config>
-        <aop:aspect ref="audience">
-            <aop:pointcut id="performance" expression=
-                    "execution(* app.Performer.perform())"/>
-            <!-- Определение среза множества точек сопряжения -->
+        <aop:aspect ref="magician">
+            <aop:pointcut id="thinking"
+                          expression="execution(* app.Thinker.thinkOfSomething(String))
+                  and args(thoughts)"/>
 
-            <aop:before
-                    pointcut-ref="performance"
-                    method="turnOffCellPhones"/>
-
-            <aop:after-returning pointcut-ref="performance"
-                                 method="applaud"/>
-
-            <aop:after-throwing pointcut-ref="performance"
-                                method="demandRefund"/>
+            <aop:before method="interceptThoughts"
+                        arg-names="thoughts" pointcut-ref="thinking"/>
         </aop:aspect>
     </aop:config>
 
-<!--    <aop:config>-->
-<!--        <aop:aspect ref="audience">-->
-<!--            <aop:pointcut id="performance" expression=-->
-<!--                    "execution(* app.Performer.perform())"-->
-<!--            />-->
-<!--            &lt;!&ndash; Совет, выполняемый и до, и после &ndash;&gt;-->
-<!--            <aop:around-->
-<!--                    pointcut-ref="performance"-->
-<!--                    method="watchPerformance()" />-->
-<!--        </aop:aspect>-->
-<!--    </aop:config>-->
+    <!--    <aop:config>-->
+    <!--        <aop:aspect ref="audience">-->
+    <!--            <aop:pointcut id="performance" expression=-->
+    <!--                    "execution(* app.Performer.perform())"/>-->
+    <!--            &lt;!&ndash; Определение среза множества точек сопряжения &ndash;&gt;-->
+
+    <!--            <aop:before-->
+    <!--                    pointcut-ref="performance"-->
+    <!--                    method="turnOffCellPhones"/>-->
+
+    <!--            <aop:after-returning pointcut-ref="performance"-->
+    <!--                                 method="applaud"/>-->
+
+    <!--            <aop:after-throwing pointcut-ref="performance"-->
+    <!--                                method="demandRefund"/>-->
+    <!--        </aop:aspect>-->
+    <!--    </aop:config>-->
+
 
 </beans>
