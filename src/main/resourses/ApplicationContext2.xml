@@ -37,4 +37,16 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.
         </aop:aspect>
     </aop:config>
 
+<!--    <aop:config>-->
+<!--        <aop:aspect ref="audience">-->
+<!--            <aop:pointcut id="performance" expression=-->
+<!--                    "execution(* app.Performer.perform())"-->
+<!--            />-->
+<!--            &lt;!&ndash; Совет, выполняемый и до, и после &ndash;&gt;-->
+<!--            <aop:around-->
+<!--                    pointcut-ref="performance"-->
+<!--                    method="watchPerformance()" />-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
 </beans>
