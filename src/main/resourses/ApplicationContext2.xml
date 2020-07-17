@@ -20,18 +20,20 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.
           class="app.Audience"/>
 
     <aop:config>
-        <aop:aspect ref="audience"> <!-- Ссылка на компонент audience -->
-            <aop:before pointcut="execution(* app.Performer.perform())"
-                        method="takeSeats"/>
+        <aop:aspect ref="audience">
+            <aop:pointcut id="performance" expression=
+                    "execution(* app.Performer.perform())"/>
+            <!-- Определение среза множества точек сопряжения -->
 
-            <aop:before pointcut="execution(* app.Performer.perform())"
-                        method="turnOffCellPhones"/>
+            <aop:before
+                    pointcut-ref="performance"
+                    method="turnOffCellPhones"/>
 
-            <aop:after-returning pointcut="execution(* app.Performer.perform())"
-                        method="applaud"/>
+            <aop:after-returning pointcut-ref="performance"
+                                 method="applaud"/>
 
-            <aop:after-throwing pointcut="execution(* app.Performer.perform())"
-                                 method="demandRefund"/>
+            <aop:after-throwing pointcut-ref="performance"
+                                method="demandRefund"/>
         </aop:aspect>
     </aop:config>
 
