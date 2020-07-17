@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cc6b0b4-a8a8-4ea1-a550-41ecf0f799e5" name="Default" comment="Определение именованного среза множества точек&#10;сопряжения для устранения избыточных определений срезов">
+    <list default="true" id="5cc6b0b4-a8a8-4ea1-a550-41ecf0f799e5" name="Default" comment="watchPerformance()">
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ProceedingJoinPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/Audience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Audience.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +53,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="app" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
@@ -109,7 +116,7 @@
       <workItem from="1594670039851" duration="800000" />
       <workItem from="1594808503251" duration="2861000" />
       <workItem from="1594816212369" duration="750000" />
-      <workItem from="1594969715823" duration="3556000" />
+      <workItem from="1594969715823" duration="4363000" />
     </task>
     <task id="LOCAL-00001" summary="Spring AOP start.">
       <created>1594824589745</created>
@@ -132,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594984594232</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="watchPerformance()">
+      <created>1594984995017</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594984995017</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +168,8 @@
     <MESSAGE value="Spring AOP start." />
     <MESSAGE value="советы" />
     <MESSAGE value="Определение именованного среза множества точек&#10;сопряжения для устранения избыточных определений срезов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Определение именованного среза множества точек&#10;сопряжения для устранения избыточных определений срезов" />
+    <MESSAGE value="watchPerformance()" />
+    <option name="LAST_COMMIT_MESSAGE" value="watchPerformance()" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1114" height="477" key="GridCell.Tab.0.bottom" timestamp="1594802813692">
@@ -173,10 +188,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="1114" height="477" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594802813692" />
-    <state x="194" y="291" key="Vcs.Push.Dialog.v2" timestamp="1594984597464">
+    <state x="194" y="291" key="Vcs.Push.Dialog.v2" timestamp="1594984998064">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="194" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594984597464" />
+    <state x="194" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594984998064" />
     <state x="386" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594969730698">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>

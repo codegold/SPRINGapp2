@@ -17,7 +17,7 @@ public class Audience {
         System.out.println("Boo! We want our money back!");
     }
 
-    public void watchPerformance(ProocedingJoinPoint joinPoint) {
+    public void watchPerformance(ProceedingJoinPoint joinPoint) {
         try {
             System.out.println("The audience is taking their seats.");
             System.out.println("The audience is turning off their cellphones");
@@ -27,7 +27,7 @@ public class Audience {
 
             long end = System.currentTimeMillis();
             System.out.println("CLAP CLAP CLAP CLAP CLAP");
-            System.out.println("The performance took " + (end - start) + " milliseconds";
+            System.out.println("The performance took " + (end - start) + " milliseconds");
         } catch (Throwable t) {
             System.out.println("Boo! We want our money back!");
         }
