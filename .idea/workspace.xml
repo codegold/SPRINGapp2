@@ -19,24 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cc6b0b4-a8a8-4ea1-a550-41ecf0f799e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/Config/SpringAppConfig.java" afterDir="false" />
+    <list default="true" id="5cc6b0b4-a8a8-4ea1-a550-41ecf0f799e5" name="Default" comment="Spring AOP start.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Audience.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Guitar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Guitar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Instrumentalist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Instrumentalist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/PhoneEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/PhoneEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Saxophone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Saxophone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/qualifiers/stringedInstrument.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/testDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/testDrive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resourses/ApplicationContext2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourses/ApplicationContext2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourses/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourses/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ApplicationContext2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ApplicationContext2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Guitar.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Guitar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Instrumentalist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Instrumentalist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/OneManBand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/OneManBand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Saxophone.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Saxophone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/testDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/testDrive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,8 +110,17 @@
       <workItem from="1594645620258" duration="2366000" />
       <workItem from="1594670039851" duration="800000" />
       <workItem from="1594808503251" duration="2861000" />
-      <workItem from="1594816212369" duration="691000" />
+      <workItem from="1594816212369" duration="750000" />
+      <workItem from="1594969715823" duration="2990000" />
     </task>
+    <task id="LOCAL-00001" summary="Spring AOP start.">
+      <created>1594824589745</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594824589745</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +137,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Spring AOP start." />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring AOP start." />
   </component>
   <component name="WindowStateProjectService">
     <state width="1114" height="477" key="GridCell.Tab.0.bottom" timestamp="1594802813692">
@@ -160,6 +159,14 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="1114" height="477" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594802813692" />
+    <state x="194" y="291" key="Vcs.Push.Dialog.v2" timestamp="1594824593295">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="194" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594824593295" />
+    <state x="386" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594969730698">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="386" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.1057@0.23.1920.1057" timestamp="1594969730698" />
   </component>
   <component name="masterDetails">
     <states>
